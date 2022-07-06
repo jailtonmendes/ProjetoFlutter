@@ -36,6 +36,9 @@ class _HomePageState extends State<HomePage> {
                 leading: Text(list[idx].id.toString()),
                 trailing: Icon(Icons.arrow_forward),
                 title: Text(list[idx].title),
+                //Passando os dados via parametros: arguments
+                onTap: () => Navigator.of(context)
+                    .pushNamed('/details', arguments: list[idx]),
               ),
               separatorBuilder: (_, __) => Divider(),
             );
